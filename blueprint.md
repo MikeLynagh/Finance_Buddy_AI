@@ -218,75 +218,66 @@ Here should be the flow. Whenever a step is completed and confirmed by me, push 
 ### Phase 1: Project Setup ✅
 - [x] Initialize Vite + React + TypeScript project
 - [x] Install core dependencies (sql.js, lucide-react, uuid)
-- [ ] Install development dependencies (vitest, tailwindcss, testing libraries)
-- [ ] Configure Tailwind CSS
-- [ ] Set up project structure (/src/core, /src/ui, /src/hooks, /src/lib)
-- [ ] Configure vitest for testing
-- [ ] Set up GitHub repository connection
+- [x] Install development dependencies (vitest, tailwindcss, testing libraries)
+- [x] Configure Tailwind CSS
+- [x] Set up project structure (/src/core, /src/ui, /src/hooks, /src/lib)
+- [x] Configure vitest for testing
+- [x] Set up GitHub repository connection
 
-### Phase 2: Core Infrastructure
-- [ ] Database setup (SQL.js with encryption)
-- [ ] Password protection system
-- [ ] Data models and TypeScript interfaces
-- [ ] Basic routing setup
-- [ ] Environment configuration for DeepSeek API
+### Phase 2: Mock Data & UI Development (NEW PRIORITY)
+- [x] Create comprehensive mock financial data
+- [x] Build dashboard layout and navigation
+- [x] Create net worth display cards
+- [ ] Implement CSV importer UI component
+- [ ] Build transaction list/table component
+- [ ] Add charts and visualizations
+- [ ] Implement month-to-month comparison views
+- [ ] Create settings/configuration panel
+- [ ] Add password protection UI (mock for now)
 
-### Phase 3: CSV Parser Engine
-- [ ] AIB CSV parser implementation
-- [ ] Revolut CSV parser implementation
+### Phase 3: Core Logic Implementation
+- [ ] CSV parser implementation (AIB/Revolut)
+- [ ] Net worth calculator logic
 - [ ] Transaction categorization system
 - [ ] Manual transaction entry
 - [ ] Cash transaction tracking
-- [ ] Parser unit tests
 
-### Phase 4: Net Worth Calculator
-- [ ] Asset tracking (liquid vs illiquid)
-- [ ] Debt tracking (mortgage, other debts)
-- [ ] Home equity manual entry
-- [ ] Net worth calculations
-- [ ] Month-to-month comparison logic
-- [ ] Calculator unit tests
-
-### Phase 5: AI Integration
+### Phase 4: AI Integration
 - [ ] DeepSeek API integration
 - [ ] Spending pattern analysis
 - [ ] Financial health score calculation
 - [ ] AI recommendation engine
 - [ ] Behavioral insights generation
-- [ ] AI integration tests
 
-### Phase 6: UI Components
-- [ ] Dashboard layout
-- [ ] CSV importer component
-- [ ] Net worth display cards
-- [ ] Transaction list/table
-- [ ] Charts and visualizations
-- [ ] Month-to-month comparison views
-- [ ] Settings/configuration panel
-
-### Phase 7: Data Persistence & Security
+### Phase 5: Database & Data Persistence (MOVED LATER)
+- [ ] Database setup (SQL.js with encryption)
+- [ ] Password protection system (real implementation)
+- [ ] Data models and TypeScript interfaces
 - [ ] Local storage encryption
 - [ ] Data export/import functionality
 - [ ] Backup/restore features
-- [ ] Security testing
 
-### Phase 8: Testing & Polish
+### Phase 6: Testing & Polish
+- [ ] Unit tests for all components
 - [ ] Integration tests
-- [ ] End-to-end testing
 - [ ] Performance optimization
 - [ ] Error handling
 - [ ] Documentation
 
-### Phase 9: Deployment Prep
+### Phase 7: Deployment Prep
 - [ ] Build optimization
 - [ ] Environment variable setup
 - [ ] Deployment configuration
 - [ ] Final testing
 
 ## Current Status
-**Phase:** 1 - Project Setup
+**Phase:** 2 - Mock Data & UI Development
 **Last Updated:** [Current Date]
-**Next Step:** Install development dependencies and configure testing
+**Next Step:** Implement CSV importer UI component and transaction list/table
+
+## Development Strategy Update
+**NEW APPROACH:** Build UI first with mock data → Get visual feedback → Implement core logic → Add database persistence
+**Benefits:** Faster iteration, early visual feedback, easier to adjust design before complex backend work
 
 ## Git Commit Strategy
 - Each completed checklist item gets its own commit
