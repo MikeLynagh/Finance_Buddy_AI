@@ -229,13 +229,15 @@ Here should be the flow. Whenever a step is completed and confirmed by me, push 
 - [x] Build dashboard layout and navigation
 - [x] Create net worth display cards
 - [x] Implement CSV importer UI component
-- [ ] Create settings/configuration panel (PRIORITY)
-  - [ ] Asset management forms (savings, investments, home)
-  - [ ] Debt management forms (mortgage, loans, credit cards)
-  - [ ] Monthly value entry interface
-  - [ ] TDD: Write tests for settings components first
-- [ ] Build transaction list/table component
-- [ ] Add charts and visualizations
+- [x] Create settings/configuration panel (PRIORITY)
+  - [x] Asset management forms (savings, investments, home)
+  - [x] Debt management forms (mortgage, loans, credit cards)
+  - [x] Monthly value entry interface
+  - [x] TDD: Write tests for settings components first
+- [x] Build transaction list/table component
+- [x] Add charts and visualizations (PRIORITY)
+  - [x] Net worth trend line chart
+  - [x] Asset allocation pie chart
 - [ ] Implement month-to-month comparison views
 - [ ] Add password protection UI (mock for now)
 
@@ -276,20 +278,20 @@ Here should be the flow. Whenever a step is completed and confirmed by me, push 
 
 ## Current Status
 **Phase:** 2 - Mock Data & UI Development
-**Branch:** feature/settings-and-net-worth-entry
+**Branch:** feature/charts-and-visualizations
 **Last Updated:** [Current Date]
-**Next Step:** Create settings page with TDD approach for net worth data entry
+**Next Step:** Implement month-to-month comparison views and transaction features
 
 ## Development Strategy Update
 **NEW APPROACH:** Build UI first with mock data → Get visual feedback → Implement core logic → Add database persistence
 **TDD APPROACH:** Write tests first for each component, then implement
-**SETTINGS PRIORITY:** Dedicated settings page for monthly net worth data entry
-**HOME VALUE:** Default to previous month's value, minimal updates needed
+**CHARTS PRIORITY:** ✅ Net worth trend line chart and asset allocation pie chart completed
+**NEXT PRIORITY:** Month-to-month comparison views and transaction list integration
 
 ## Git Commit Strategy
 - Each completed checklist item gets its own commit
 - Commit messages follow format: `feat: [component] - [description]`
-- Example: `feat: csv-parser - implement AIB CSV parsing with tests`
+- Example: `feat: charts - implement net worth trend and asset allocation charts`
 - Tag major milestones with version numbers
 
 ## Rollback Points

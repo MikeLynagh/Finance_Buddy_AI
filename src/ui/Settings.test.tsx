@@ -89,4 +89,49 @@ describe('Settings Component', () => {
       expect(screen.getByText('€460,000')).toBeInTheDocument()
     })
   })
+
+  it('allows adding new debt', async () => {
+    render(<Settings />)
+    fireEvent.click(screen.getByText('Add New Debt'))
+    fireEvent.change(screen.getByLabelText('Debt Name'), { target: { value: 'Car Loan' } })
+    fireEvent.change(screen.getByLabelText('Balance'), { target: { value: '8000' } })
+    fireEvent.change(screen.getByLabelText('Interest Rate (%)'), { target: { value: '6.2' } })
+    fireEvent.click(screen.getByText('Save Debt'))
+    await waitFor(() => {
+      expect(screen.getByText('Car Loan')).toBeInTheDocument()
+      expect(screen.getByText('€8,000 (6.2%)')).toBeInTheDocument()
+    })
+  })
+
+  it('validates required fields when adding debt', async () => {
+    render(<Settings />)
+    fireEvent.click(screen.getByText('Add New Debt'))
+    fireEvent.click(screen.getByText('Save Debt'))
+    await waitFor(() => {
+      expect(screen.getByText('Debt name is required')).toBeInTheDocument()
+      expect(screen.getByText('Balance is required')).toBeInTheDocument()
+    })
+  })
+
+  it('allows editing existing debt', async () => {
+    render(<Settings />)
+    const editButtons = screen.getAllByText('Edit')
+    // The first edit button for debts (after assets)
+    fireEvent.click(editButtons[2])
+    fireEvent.change(screen.getByLabelText('Balance'), { target: { value: '330000' } })
+    fireEvent.click(screen.getByText('Update Debt'))
+    await waitFor(() => {
+      expect(screen.getByText('€330,000 (3.2%)')).toBeInTheDocument()
+    })
+  })
+
+  it('allows deleting a debt', async () => {
+    render(<Settings />)
+    const deleteButtons = screen.getAllByText('Delete')
+    // The first delete button for debts (after assets)
+    fireEvent.click(deleteButtons[2])
+    await waitFor(() => {
+      expect(screen.queryByText('Mortgage')).not.toBeInTheDocument()
+    })
+  })
 }) 
